@@ -1,0 +1,28 @@
+<head>
+  <title>jobs</title>
+</head>
+
+<body>
+  <h1>Add a Job</h1>
+
+</body>
+
+<template name="hello">
+  <form id="formulaire" class="formulaire">
+    <input type="text" name="titlejob" id="titlejob" placeholder="Titre de l'annonce"><br>
+    <input type="text" name="contrat" id="contrat" placeholder="Type de contrat"><br>
+    <input type="text" name="compétences" id="compétences" placeholder="Compétences requise"><br>
+    <input type="Mission" name="mission" id="mission" placeholder="Mission proposé"><br>
+    <input type="submit" value="Enoyer l'annonce">
+  </form>
+
+  {{#each derniersMessages}}
+    <p>
+        <label> {{title}} </label>
+        <em> {{contrat}} </em><br>
+        <form id="description" class="description">
+        <a href="{{pathFor route='jobdescription'}}"> <input type="submit" id="postuler" value="Plus d'information"></a>
+        </form>
+    </p>
+{{/each}}
+</template>
